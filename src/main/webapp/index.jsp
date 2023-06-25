@@ -21,16 +21,15 @@
 <P><INPUT NAME="firstnumber" size=10></P>
 <P>Second number:</P>
 <P><INPUT name="secondnumber" size=10></P>
-<P><INPUT TYPE="SUBMIT" NAME="Submit" VALUE="Calculate"></P>
-<%
+	<%
 		if(strResult != null){
 	%>
 	     <p> The result is <%= strResult %>  </p>
 	<%
 		}
 	%>
-	<br/>
-	<input type="submit" value="Calculate"/>
+<P><INPUT TYPE="SUBMIT" NAME="Submit" VALUE="Calculate"></P>
+
 </FORM>
 <P>
 <HR HEIGHT="1px" WIDTH="80%" COLOR="#000000">
