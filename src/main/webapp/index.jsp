@@ -7,8 +7,6 @@
 	String strResult = (String) request.getAttribute("RESULT");
 %>
 
-<form action="CalculatorServlet" method="post">
-
 <FORM METHOD="post" ACTION="CalculatorServlet">
 <P>Select Operation:</P>
 <P><SELECT NAME="expression">
