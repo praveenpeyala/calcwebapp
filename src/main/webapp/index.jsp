@@ -4,7 +4,7 @@
 
 
 <%
-	String strResultadd = (String) request.getAttribute("RESULT");
+	String strResultadd = (String) request.getAttribute("RESULT OF ADD");
 %>
 
 <form action="CalculatorServlet" method="post">
@@ -24,12 +24,12 @@
 </form>
 
 <%
-	String strResultsub = (String) request.getAttribute("RESULT");
+	String strResultsub = (String) request.getAttribute("RESULT OF SUB");
 %>
 <form action="CalculatorServlet" method="post">
 
-	<input type="text" name="num1" /> <label>-</label>
-	<input type="text" name="num2" /> <label>=</label>
+	<input type="text" name="num4" /> <label>-</label>
+	<input type="text" name="num3" /> <label>=</label>
 	<%
 		if(strResultsub != null){
 	%>
