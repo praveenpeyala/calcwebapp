@@ -42,7 +42,7 @@ public class CalculatorServlet extends HttpServlet {
 		int num1 = Integer.parseInt(strNum1);
 		int num2 = Integer.parseInt(strNum2);
 		
-		int result = CalculatorService.sub(num1, num2);
+		int result = CalculatorService.add(num1, num2);
 		
 		RequestDispatcher rd = request.getRequestDispatcher("index.jsp");
 		request.setAttribute("RESULT", String.valueOf(result));
