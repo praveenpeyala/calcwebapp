@@ -22,17 +22,19 @@
 <P>Second number:</P>
 <P><INPUT name="secondnumber" size=10></P>
 <P><INPUT TYPE="SUBMIT" NAME="Submit" VALUE="Calculate"></P>
+<%
+		if(strResult != null){
+	%>
+	     <p> The result is <%= strResult %>  </p>
+	<%
+		}
+	%>
+	<br/>
+	<input type="submit" value="Calculate"/>
 </FORM>
 <P>
 <HR HEIGHT="1px" WIDTH="80%" COLOR="#000000">
 </P>
-<% try { %>
-<P>
-<B><%="Result is " + calc.getResult(request.getParameter("firstnumber"), request.getParameter("secondnumber"), request.getParameter("expression"))%></B>
-</P>
-<% } catch (Exception ex) { %>
-     <%=ex.getMessage() %>
-<% } %>
 
 </body>
 </html>
