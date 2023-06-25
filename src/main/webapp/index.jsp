@@ -1,35 +1,19 @@
-<html>
-<title>calculator</title>
-<head></head>
-<body>
-<%@page language="java"%>
-<%
- int num1 = Integer.parseInt(request.getParameter("num1"));
- int num2 = Integer.parseInt(request.getParameter("num2"));
+<HTML>
+    <HEAD>
+    </HEAD>
 
- String operation = request.getParameter("r1");
-
- if(operation.equals("Add")){
- int add=num1+num2;
- out.println("Addition is: "+add);
- }
- else if(operation.equals("Sub")){
-
- int sub=num1-num2;
- out.println("Substraction is: "+sub);
- }
- else if(operation.equals("mul")){
- int mul=num1*num2;
- out.println("multiplication is: "+mul);
- }
- else if(operation.equals("div"))
- {
- int div = num1/num2;
- if(num1>=num2)
- out.println("division is: "+div);
- else
- out.println("The division cannot be performed");
- }
-%>
-</body>
-</html>
+    <BODY>
+        <FORM ACTION="CalculatorServlet" METHOD="POST">
+            <CENTER>
+                <H1>The JSP Calculator</H1>
+                <INPUT TYPE="TEXT" NAME="op1" VALUE="">
+                <BR>
+                +
+                <BR>
+                <INPUT TYPE="TEXT" NAME="op2" VALUE="">
+                <BR>
+                <INPUT TYPE="SUBMIT" VALUE="&nbsp;&nbsp;=&nbsp;&nbsp;">
+            </CENTER>
+        </FORM>
+    </BODY>
+</HTML>
