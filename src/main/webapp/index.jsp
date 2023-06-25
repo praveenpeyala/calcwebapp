@@ -1,37 +1,35 @@
 <html>
+<title>calculator</title>
+<head></head>
 <body>
-<h2>Calculator</h2>
-
-
+<%@page language="java"%>
 <%
-	String strResult = (String) request.getAttribute("RESULT");
+ int num1 = Integer.parseInt(request.getParameter("num1"));
+ int num2 = Integer.parseInt(request.getParameter("num2"));
+
+ String operation = request.getParameter("r1");
+
+ if(operation.equals("Add")){
+ int add=num1+num2;
+ out.println("Addition is: "+add);
+ }
+ else if(operation.equals("Sub")){
+
+ int sub=num1-num2;
+ out.println("Substraction is: "+sub);
+ }
+ else if(operation.equals("mul")){
+ int mul=num1*num2;
+ out.println("multiplication is: "+mul);
+ }
+ else if(operation.equals("div"))
+ {
+ int div = num1/num2;
+ if(num1>=num2)
+ out.println("division is: "+div);
+ else
+ out.println("The division cannot be performed");
+ }
 %>
-
-<FORM METHOD="post" ACTION="CalculatorServlet">
-<P>Select Operation:</P>
-<P><SELECT NAME="expression">
-<OPTION VALUE=1>Multiply
-<OPTION VALUE=2>Divide
-<option VALUE=3>Add
-<option VALUE=4>Subtract
-</SELECT></P>
-<P>First number:</P>
-<P><INPUT NAME="firstnumber" size=10></P>
-<P>Second number:</P>
-<P><INPUT name="secondnumber" size=10></P>
-	<%
-		if(strResult != null){
-	%>
-	     <p> The result is <%= strResult %>  </p>
-	<%
-		}
-	%>
-<P><INPUT TYPE="SUBMIT" NAME="Submit" VALUE="Calculate"></P>
-
-</FORM>
-<P>
-<HR HEIGHT="1px" WIDTH="80%" COLOR="#000000">
-</P>
-
 </body>
 </html>
