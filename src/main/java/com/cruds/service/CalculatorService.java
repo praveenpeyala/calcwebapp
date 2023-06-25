@@ -2,9 +2,9 @@ package com.cruds.service;
 
 public class CalculatorService {
 	
-	public static int sub(int x, int y)
+	public static int add(int x, int y)
 	{
-		return x - y;
+		return x + y;
 	}
 
 }
