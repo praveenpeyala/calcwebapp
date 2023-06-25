@@ -1,19 +1,27 @@
-<HTML>
-    <HEAD>
-    </HEAD>
+<html>
+<body>
+<h2>Calculator</h2>
 
-    <BODY>
-        <FORM ACTION="CalculatorServlet" METHOD="POST">
-            <CENTER>
-                <H1>The JSP Calculator</H1>
-                <INPUT TYPE="TEXT" NAME="op1" VALUE="">
-                <BR>
-                +
-                <BR>
-                <INPUT TYPE="TEXT" NAME="op2" VALUE="">
-                <BR>
-                <INPUT TYPE="SUBMIT" VALUE="&nbsp;&nbsp;=&nbsp;&nbsp;">
-            </CENTER>
-        </FORM>
-    </BODY>
-</HTML>
+
+<%
+	String strResult = (String) request.getAttribute("RESULT");
+%>
+
+<form action="CalculatorServlet" method="post">
+
+	<input type="text" name="num1" /> <label>+</label>
+	<input type="text" name="num2" /> <label>=</label>
+	<%
+		if(strResult != null){
+	%>
+	     <p> The result is <%= strResult %>  </p>
+	<%
+		}
+	%>
+	<br/>
+	<input type="submit" value="Calculate"/>
+
+</form>
+
+</body>
+</html>
